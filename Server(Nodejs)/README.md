@@ -5,3 +5,7 @@
 ### 참고 링크  
 
 기본 nodejs 사용법 정리 사이트 :  https://myeonguni.tistory.com/1582  
+
+express 모듈 + ejs 사용법 : https://araikuma.tistory.com/456
+
+ejs 관련 설명 : https://yahohococo.tistory.com/43
