@@ -8,4 +8,6 @@
 
 express 모듈 + ejs 사용법 : https://araikuma.tistory.com/456
 
-ejs 관련 설명 : https://yahohococo.tistory.com/43
+ejs 관련 설명 : https://yahohococo.tistory.com/43  
+
+python 에서 node js 연결 방법 : https://stackoverflow.com/questions/45247118/how-can-i-communicate-between-running-python-code-and-nodejs  

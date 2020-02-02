@@ -6,6 +6,8 @@ var app = express();
 
 //get 함수 등록 첫번째 경로에 엑세스 되었을 때 두번째 인자의 함수 호출
 app.get('/', function(req, res){ 
+    console.log(req);
+    console.log(res);
     res.send('Hello World!'); 
 }) 
 
