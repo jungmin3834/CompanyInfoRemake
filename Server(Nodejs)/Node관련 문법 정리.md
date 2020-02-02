@@ -18,5 +18,11 @@
   설치 방법 : npm install ejs  
   //사용 시 require('ejs'); 
 
-
+## body-parser
   
+  Post 메세지를 수신 받았을 때 url body 라인에서 원하는 정보를 쉽게 추출하기 위해서 만들어진 모듈.  
+
+    설치 방법 : npm install body-parser
+    var bodyParser = require('body-parser');  
+    app.use(bodyparser); 
+
