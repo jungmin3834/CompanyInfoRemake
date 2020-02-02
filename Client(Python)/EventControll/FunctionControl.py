@@ -28,7 +28,7 @@ class FucntionControl:
             input_data(company)
             self.companyContainer.refreshContainer()
 
-    #클릭시 위에 창 업데이트 해야하는거 민수형 파일 이용
+    #로우 클릭시 위에 창 업데이트 해야하는거 민수형 파일 이용
     def btn_listviewItemClick(self):
         index = self.getSelectRowIndex()
         self.companyContainer.companyInfo.makeUpEditText(self.companyContainer.companyList[index])
@@ -81,6 +81,7 @@ class FucntionControl:
     # 입력 확장 버튼 클릭
     def btn_openInput(self):
         a = Ui_InputText()
+
 
 
     # 로우 선택 시

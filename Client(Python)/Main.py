@@ -3,15 +3,15 @@ from Window.Ui_MainWindow import Ui_StartWindow
 import requests
 import json
 
-url = "http://localhost:3000"
-data = {'head' : 'Junmin' , 'msg': 'Hi!!!'}
-headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-r = requests.post(url, data=json.dumps(data), headers=headers)
+
 
 def send_message_node(url):
     params = {'param1': 'jungmin'}
     r = requests.get(url , params= params)
-
+    url = "http://localhost:3000"
+    data = {'head': 'Junmin', 'msg': 'Hi!!!'}
+    headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+    r = requests.post(url, data=json.dumps(data), headers=headers)
     print(r.text)
     return r
 
@@ -28,4 +28,4 @@ def MainStart():
     if __name__ == "__main__":
         Ui_StartWindow()
 
-##MainStart()
+MainStart()
