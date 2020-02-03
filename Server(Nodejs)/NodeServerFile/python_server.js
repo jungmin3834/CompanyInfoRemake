@@ -1,31 +1,26 @@
 //express 라이브러리를 가지고 옴 안될 경우 npm install express
-var express = require('express'); 
-var bodyParser = require('body-parser');
-var dataControl = require('./data_control');
-var dbControl = require('./db_control');
+const express = require('express'); 
+const bodyParser = require('body-parser');
+const eventControl = require('./event_control');
 
 var app = express(); 
 
 app.use(bodyParser.json())
 
 app.post('/insert',function(req,res){
-        var data = dataControl.query_data_make(req.body);
-        if(dbControl.company_data_insert(data) == "Fail")
-            res.send("Fail");
-        else
-            res.send("success");
+    eventControl.insertManager(req,res);
 });
 
 app.post('/selectall',function(req,res){
-    res.send("not make yet");
+    eventControl.selectAllManager(req,res);
 });
 
 app.post('/update',function(req,res){
-    res.send("not make yet");
+    eventControl.updateManager(req,res);
 });
 
 app.post('/delete',function(req,res){
-    res.send("not make yet");
+    eventControl.deleteManager(req,res);
 });
 
 //express 변수 안에 있는 속성값을 사용하기 위해 app에 저장

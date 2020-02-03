@@ -1,5 +1,5 @@
 
-var query_data_make = function(data)
+var queryDataMake = function(data)
 {
     if(data == null)
         return null;
