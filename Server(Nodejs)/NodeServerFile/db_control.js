@@ -10,16 +10,17 @@ var connection = mysql.createConnection({
 var company_data_insert = function(data)
 {
     connection.connect(function(err) {
-        // connected! (unless `err` is set)
+        return "Fail";
     });
 
     var query = connection.query('INSERT INTO company_info SET ?', data.queryCompanyData, function(err, result) {
-        // Neat!
+        return "Fail";
     });
 
     var query = connection.query('INSERT INTO qualification SET ?', data.queryPassQualificationData, function(err, result) {
-        // Neat!
+        return "Fail";
     });
 
+    return "success";
     console.log(query.sql);
 }

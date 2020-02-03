@@ -7,20 +7,28 @@ var dbControl = require('./db_control');
 var app = express(); 
 
 app.use(bodyParser.json())
+
 app.post('/insert',function(req,res){
-
-        var company = req.body.companyInfo;
-        var passQualification = req.body.passQualification;
-     
         var data = dataControl.query_data_make(req.body);
-        dbControl.company_data_insert(data);
-        res.send("nothing");
+        if(dbControl.company_data_insert(data) == "Fail")
+            res.send("Fail");
+        else
+            res.send("success");
+});
 
+app.post('/selectall',function(req,res){
+    res.send("not make yet");
+});
+
+app.post('/update',function(req,res){
+    res.send("not make yet");
+});
+
+app.post('/delete',function(req,res){
+    res.send("not make yet");
 });
 
 //express 변수 안에 있는 속성값을 사용하기 위해 app에 저장
-
-
 app.get(function(res)
 {
     console.log("여기 ! " + res)
