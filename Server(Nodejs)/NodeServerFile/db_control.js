@@ -7,15 +7,25 @@ var connection = mysql.createConnection({
   password : 'root',
 });
 
-var companyDataInsert = function(data)
-{
+var connectDB = function(){
     connection.connect(function(err) {
         return "Fail";
     });
-    var query = connection.query('INSERT INTO company_info SET ?', data.queryCompanyData, function(err, result) {
+}
+
+var disconnectDB = function(){
+    connection.end(function(err) {
         return "Fail";
     });
-    var query = connection.query('INSERT INTO qualification SET ?', data.queryPassQualificationData, function(err, result) {
+}
+
+var companyDataInsert = function(data)
+{
+   
+    var querycompany_info = connection.query('INSERT INTO company_info SET ?', data.queryCompanyData, function(err, result) {
+        return "Fail";
+    });
+    var queryqualification = connection.query('INSERT INTO qualification SET ?', data.queryPassQualificationData, function(err, result) {
         return "Fail";
     });
     return "success";
@@ -23,16 +33,35 @@ var companyDataInsert = function(data)
 }
 
 var companyDataSelectAll = function(data)
-{
-    return "success";
+{ 
+    var querycompany_info = connection.query('SELECT * FROM company_info , qualification WHERE name = ?', data.queryCompanyData.name , function(err, result) {
+        return "Fail";
+    });
+
 }
 
 var companyDataUpdate = function(data)
 {
-    return "success";
+    var query = connection.query('UPDATE  company_info SET ?', data.queryCompanyData , ' WHERE name ?', 
+    data.queryCompanyData.name , function(err, result) {
+        return "Fail";
+    });
+
+    var query = connection.query('UPDATE  qualification SET ?', data.queryPassQualificationData , ' WHERE name ?', 
+    data.queryCompanyData.name , function(err, result) {
+        return "Fail";
+    });
+
 }
 
 var companyDataDelete = function(data)
 {
+    var query = connection.query('DELETE FROM company_info where name ?' , data.queryCompanyData.name , function(err, result) {
+        return "Fail";
+    });
+    var query = connection.query('DELETE FROM qualification where name ?' , data.queryCompanyData.name , function(err, result) {
+        return "Fail";
+    });
+
     return "success";
 }
