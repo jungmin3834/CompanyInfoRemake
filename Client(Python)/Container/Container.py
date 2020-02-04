@@ -1,5 +1,6 @@
 from ClassDirectory.CompanyInfo import *
 from EventControll.send_firebase import *
+from EventControll.serverControl import *
 from PyQt5.QtWidgets import QTableWidgetItem
 
 class Container:
@@ -11,6 +12,7 @@ class Container:
 
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
+        connectGetAllDBData()
         self.companyList = search()
         self.insertCompanyArrayToList(self.window, self.companyList)
 

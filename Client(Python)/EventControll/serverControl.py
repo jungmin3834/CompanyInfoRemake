@@ -6,13 +6,15 @@ def send_message_node(url):
     print(r.text)
     return r
 
+def connectGetAllDBData():
+    print("data output")
 
 def get_host_path(request_type):
     url = "http://localhost:3000/"
     return url + request_type
 
 
-def connect_insert(self , company):
+def connect_insert(company):
     import requests
     import json
     url = "http://localhost:3000/insert"
@@ -56,13 +58,10 @@ def connect_insert(self , company):
     print("insert Connect")
 
 
-def connect_update():
+def connect_update(company):
     print("update Connect")
 
 
-def connect_delete():
+def connect_delete(company):
     print("delete Connect")
 
-
-def connect_delete():
-    print("getData Connect")

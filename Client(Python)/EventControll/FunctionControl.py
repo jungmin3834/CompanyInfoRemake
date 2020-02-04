@@ -3,6 +3,7 @@ from Window.Info_Window import *
 from Container.Container import *
 from Window.Ui_DeleteCode import *
 from Window.Ui_InputText import *
+from EventControll.serverControl import *
 
 
 class FucntionControl:
@@ -18,6 +19,7 @@ class FucntionControl:
         company = self.companyContainer.getCompany()
         if len(company.company) > 0 and len(company.job) > 0 and len(company.sales) > 0:
             input_data(company)
+            connect_insert(company)
 
 #업데이트 버튼 클리어! /위에 창 업데이트 + 리스트 수정만 해주면 됨.
     def btn_update(self):
@@ -26,7 +28,9 @@ class FucntionControl:
         if len(company.company) > 0 and len(company.job) > 0 and len(company.sales) > 0:
             remove(self.companyContainer.companyList[index])
             input_data(company)
+            connect_update(company)
             self.companyContainer.refreshContainer()
+
 
     #로우 클릭시 위에 창 업데이트 해야하는거 민수형 파일 이용
     def btn_listviewItemClick(self):
@@ -36,6 +40,7 @@ class FucntionControl:
     #삭제 버튼 클리어! (선택한거)
     def btn_delete(self):
         self.btn_openDelete()
+        connect_delete()
         #remove(self.companyContainer.getCompany())
         #self.companyContainer.refreshContainer()
 
