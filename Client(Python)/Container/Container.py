@@ -12,7 +12,7 @@ class Container:
 
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
-        connectGetAllDBData()
+        connect_delete()
         self.companyList = search()
         self.insertCompanyArrayToList(self.window, self.companyList)
 
