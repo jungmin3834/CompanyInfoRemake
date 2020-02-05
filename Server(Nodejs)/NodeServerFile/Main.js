@@ -1,7 +1,7 @@
 //express 라이브러리를 가지고 옴 안될 경우 npm install express
 const express = require('express'); 
 const bodyParser = require('body-parser');
-const eventControl = require('./event_control');
+const eventControl = require('./Control/EventControl');
 
 var app = express(); 
 
