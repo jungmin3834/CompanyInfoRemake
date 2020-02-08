@@ -1,6 +1,6 @@
 
-const dataControl = require('./data_control');
-const dbControl = require('./db_control');
+const dataControl = require('./DataControl');
+const dbControl = require('./DbControl');
 
 var insertManager = function(req,res)
 {
