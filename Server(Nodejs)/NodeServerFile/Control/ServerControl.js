@@ -9,7 +9,9 @@ var app = express();
 app.use(bodyParser.json())
 
 app.post('/insert',function(req,res){
-    eventControl.eventControl.insertManager(req,res);
+    console.log(req.body.Company_info.name)
+    res.send("sucess");
+    //eventControl.eventControl.insertManager(req,res);
 });
 
 app.post('/selectall',function(req,res){
