@@ -81,12 +81,14 @@ def search():
         return
 
     for k in data:
+
           passQulification = PassQualification(data[k]['passQualification']['학점'],data[k]['passQualification']['토익'],data[k]['passQualification']['토익 스피킹:'],data[k]['passQualification']['오픽']
                             ,data[k]['passQualification']['기타언어'],data[k]['passQualification']['자격증'],data[k]['passQualification']['해외경험'],data[k]['passQualification']['수상 내역'],
                             data[k]['passQualification']['인턴'],data[k]['passQualification']['봉사 활동'])
           company = Company(data[k]['Company_info']['name'],data[k]['Company_info']['sales'],data[k]['Company_info']['job'],data[k]['Company_info']['typed'],data[k]['Company_info']['establish'],data[k]['Company_info']['location']
                   ,data[k]['Company_info']['qualification'],data[k]['Company_info']['process'],data[k]['Company_info']['companySales'],data[k]['Company_info']['people'],data[k]['Company_info']['preferential'],data[k]['Company_info']['welfare']
                   ,passQulification)
+          print(company.company)
           company_list.append(company)
 
     # 회사정보담긴 객체들 집합 리스트로

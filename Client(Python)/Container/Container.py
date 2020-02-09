@@ -12,8 +12,9 @@ class Container:
 
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
-        connect_delete()
         self.companyList = search()
+        for k in self.companyList:
+            print(k.company)
         self.insertCompanyArrayToList(self.window, self.companyList)
 
     def getCompany(self):
@@ -22,6 +23,7 @@ class Container:
     def insertCompanyArrayToList(self,window, companyArray):
         window.tableWidget.setRowCount(0)
         window.tableWidget.setRowCount(len(companyArray))
+
         for j in range(0, len(companyArray)):
             for i in range(0, 11):
                 window.tableWidget.setItem(j, i, QTableWidgetItem(companyArray[j].getItemsByIndex(i)))
