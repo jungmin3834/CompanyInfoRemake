@@ -20,8 +20,9 @@ def connect_get_all_data():
 
 
 def connect_insert(company):
+    print(company['Company_info'])
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    r = requests.post(connect_get_all_data('insert'), data=json.dumps(make_company_data(company)), headers=headers)
+    r = requests.post(get_host_path('insert'), data=json.dumps(company), headers=headers)
 
     if r.text == "Fail":
         print("실패!")
@@ -71,4 +72,7 @@ def make_company_data(company):
             'volunteer': company.PassQualification.volunteer
         }
     }
+
+    connect_insert(data)
+
     return data

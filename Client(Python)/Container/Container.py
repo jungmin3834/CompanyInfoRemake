@@ -14,7 +14,8 @@ class Container:
         self.companyInfo.clearAllEditText()
         self.companyList = search()
         for k in self.companyList:
-            print(k.company)
+            make_company_data(k)
+
         self.insertCompanyArrayToList(self.window, self.companyList)
 
     def getCompany(self):

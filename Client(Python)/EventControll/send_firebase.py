@@ -88,7 +88,6 @@ def search():
           company = Company(data[k]['Company_info']['name'],data[k]['Company_info']['sales'],data[k]['Company_info']['job'],data[k]['Company_info']['typed'],data[k]['Company_info']['establish'],data[k]['Company_info']['location']
                   ,data[k]['Company_info']['qualification'],data[k]['Company_info']['process'],data[k]['Company_info']['companySales'],data[k]['Company_info']['people'],data[k]['Company_info']['preferential'],data[k]['Company_info']['welfare']
                   ,passQulification)
-          print(company.company)
           company_list.append(company)
 
     # 회사정보담긴 객체들 집합 리스트로
