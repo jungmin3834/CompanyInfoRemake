@@ -4,6 +4,8 @@ const dbControl = require('./DbControl');
 
 var insertManager = function(req,res)
 {
+    console.log("엥");
+    return;
     var data = dataControl.queryDataMake(req.body);
     if(dbControl.companyDataInsert(data) == "Fail")
         res.send("Fail");
