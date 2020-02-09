@@ -24,6 +24,11 @@ app.post('/delete',function(req,res){
     eventControl.eventControl.deleteManager(req,res);
 });
 
+app.get('/',function(req,res)
+{
+    console.log("접속 성공!");
+    res.send("Hello WOrld");
+})
 //express 변수 안에 있는 속성값을 사용하기 위해 app에 저장
 app.get(function(res)
 {
