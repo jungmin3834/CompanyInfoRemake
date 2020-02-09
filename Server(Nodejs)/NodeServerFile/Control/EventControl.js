@@ -2,39 +2,36 @@
 const dataControl = require('./DataControl');
 const dbControl = require('./DbControl');
 
-var insertManager = function(req,res)
-{
-    console.log("엥");
-    return;
-    var data = dataControl.queryDataMake(req.body);
-    if(dbControl.companyDataInsert(data) == "Fail")
+var eventControl ={
+    insertManager(req,res){
+        var data = dataControl.queryDataMake(req.body);
+        if(dbControl.DB.companyDataInsert(data) == "Fail")
+            res.send("Fail");
+        else
+            res.send("success");
+    },
+    selectAllManager(req,res)
+    {
+        if(dbControl.DB.companyDataSelectAll(data) == "Fail")
         res.send("Fail");
-    else
+        else
         res.send("success");
-}
+        
+    },
+    updateManger(req,res)
+    {
+        if(dbControl.DB.companyDataUpdate(data) == "Fail")
+        res.send("Fail");
+        else
+        res.send("success");
+    },
+    deleteManager(req,res)
+    {
+        if(dbControl.DB.companyDataDelete(data) == "Fail")
+        res.send("Fail");
+        else
+        res.send("success");
+    }
+};
 
-var selectAllManager = function(req,res)
-{
-    if(dbControl.companyDataSelectAll(data) == "Fail")
-    res.send("Fail");
-    else
-    res.send("success");
-    
-}
-
-
-var updateManger = function(req,res)
-{
-    if(dbControl.companyDataUpdate(data) == "Fail")
-    res.send("Fail");
-    else
-    res.send("success");
-}
-
-var deleteManager = function(req,res)
-{
-    if(dbControl.companyDataDelete(data) == "Fail")
-    res.send("Fail");
-    else
-    res.send("success");
-}
+module.exports.eventControl = eventControl;

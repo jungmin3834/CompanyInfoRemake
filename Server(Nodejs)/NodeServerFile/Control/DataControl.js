@@ -1,5 +1,7 @@
 
-var queryDataMake = function(data)
+
+var queryDataControl = { 
+queryDataMake(data)
 {
     if(data == null)
         return null;
@@ -39,3 +41,8 @@ var queryDataMake = function(data)
     var datalist = {queryCompanyData, queryPassQualificationData};
     return datalist;
 }
+};
+
+module.exports.queryDataControl = queryDataControl;
+
+

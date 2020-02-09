@@ -3,24 +3,25 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const eventControl = require('./EventControl');
 
+
 var app = express(); 
 
 app.use(bodyParser.json())
 
 app.post('/insert',function(req,res){
-    eventControl.insertManager(req,res);
+    eventControl.eventControl.insertManager(req,res);
 });
 
 app.post('/selectall',function(req,res){
-    eventControl.selectAllManager(req,res);
+    eventControl.eventControl.selectAllManager(req,res);
 });
 
 app.post('/update',function(req,res){
-    eventControl.updateManager(req,res);
+    eventControl.eventControl.updateManager(req,res);
 });
 
 app.post('/delete',function(req,res){
-    eventControl.deleteManager(req,res);
+    eventControl.eventControl.deleteManager(req,res);
 });
 
 //express 변수 안에 있는 속성값을 사용하기 위해 app에 저장
