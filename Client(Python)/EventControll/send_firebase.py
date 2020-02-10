@@ -81,7 +81,6 @@ def search():
         return
 
     for k in data:
-
           passQulification = PassQualification(data[k]['passQualification']['학점'],data[k]['passQualification']['토익'],data[k]['passQualification']['토익 스피킹:'],data[k]['passQualification']['오픽']
                             ,data[k]['passQualification']['기타언어'],data[k]['passQualification']['자격증'],data[k]['passQualification']['해외경험'],data[k]['passQualification']['수상 내역'],
                             data[k]['passQualification']['인턴'],data[k]['passQualification']['봉사 활동'])

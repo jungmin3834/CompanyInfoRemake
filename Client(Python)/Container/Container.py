@@ -13,8 +13,8 @@ class Container:
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
         self.companyList = search()
-        for k in self.companyList:
-            make_company_data(k)
+        #for k in self.companyList:
+        #    make_company_data(k)
 
         self.insertCompanyArrayToList(self.window, self.companyList)
 
