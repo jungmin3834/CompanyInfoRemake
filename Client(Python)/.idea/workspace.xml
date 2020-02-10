@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5d5e5d0-be25-4489-80ca-f200a7945c62" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Server(Nodejs)/NodeServerFile/Control/EventControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Server(Nodejs)/NodeServerFile/Control/EventControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server(Nodejs)/NodeServerFile/Control/ServerControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Server(Nodejs)/NodeServerFile/Control/ServerControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/untitled4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Container/Container.py" beforeDir="false" afterPath="$PROJECT_DIR$/Container/Container.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventControll/FunctionControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventControll/FunctionControl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventControll/send_firebase.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state>
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -25,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Container/Container.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="198">
+              <caret line="16" column="68" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="68" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -40,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassDirectory/CompanyInfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
+            <state relative-caret-position="1691">
               <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
             </state>
           </provider>
@@ -64,19 +67,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EventControll/send_firebase.py">
+        <entry file="file://$PROJECT_DIR$/EventControll/FunctionControl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+            <state relative-caret-position="389">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding>
+                <element signature="e#24#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EventControll/FunctionControl.py">
+        <entry file="file://$PROJECT_DIR$/Window/Ui_DeleteCode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="967">
-              <caret line="75" column="13" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="13" />
+            <state relative-caret-position="1064">
+              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Window/Ui_InputText.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding>
+                <element signature="e#219#229#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Window/Ui_MainWindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3857">
-              <caret line="205" selection-start-line="205" selection-end-line="205" />
+            <state relative-caret-position="38">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -105,8 +126,8 @@
       <find>QTableWidgetItem</find>
       <find>기업이름</find>
       <find>intern</find>
-      <find>print</find>
       <find>send_message_node</find>
+      <find>print</find>
     </findStrings>
     <dirStrings>
       <dir>G:\pyhonfile\untitled4</dir>
@@ -120,7 +141,9 @@
       <list>
         <option value="$PROJECT_DIR$/EventControll/send_firebase.py" />
         <option value="$PROJECT_DIR$/EventControll/serverControl.py" />
+        <option value="$PROJECT_DIR$/Window/Ui_DeleteCode.py" />
         <option value="$PROJECT_DIR$/Container/Container.py" />
+        <option value="$PROJECT_DIR$/EventControll/FunctionControl.py" />
       </list>
     </option>
   </component>
@@ -157,6 +180,11 @@
               <item name="Client(Python)" type="b2602c69:ProjectViewProjectNode" />
               <item name="Client(Python)" type="462c0819:PsiDirectoryNode" />
               <item name="EventControll" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Client(Python)" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client(Python)" type="462c0819:PsiDirectoryNode" />
+              <item name="Window" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,18 +316,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -371,26 +399,9 @@
     <state x="459" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580934728387" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Window/Ui_MainWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3857">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClassDirectory/CompanyInfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
+        <state relative-caret-position="1691">
           <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
         </state>
       </provider>
@@ -400,15 +411,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EventControll/send_firebase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+        <state>
+          <caret selection-end-line="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EventControll/FunctionControl.py">
+    <entry file="file://$PROJECT_DIR$/Window/Ui_MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="13" />
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Container/Container.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -422,12 +443,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Container/Container.py">
+    <entry file="file://$PROJECT_DIR$/EventControll/FunctionControl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="389">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#24#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window/Ui_DeleteCode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window/Ui_InputText.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#219#229#0" expanded="true" />
           </folding>
         </state>
       </provider>

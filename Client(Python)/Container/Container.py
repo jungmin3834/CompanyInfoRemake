@@ -1,22 +1,20 @@
 from ClassDirectory.CompanyInfo import *
-from EventControll.send_firebase import *
 from EventControll.serverControl import *
 from PyQt5.QtWidgets import QTableWidgetItem
 
 class Container:
     def __init__(self, window):
         self.window = window
-        initialize_firebase()
         self.companyInfo = CompanyInfo(window)
         self.refreshContainer()
 
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
-        self.companyList = search()
+        self.companyList = None
         #for k in self.companyList:
         #    make_company_data(k)
 
-        self.insertCompanyArrayToList(self.window, self.companyList)
+        #self.insertCompanyArrayToList(self.window, self.companyList)
 
     def getCompany(self):
         return self.companyInfo.makeCompany()
