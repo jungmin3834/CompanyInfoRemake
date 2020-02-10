@@ -3,7 +3,8 @@
 var eventHandlerControl = {
     eventHandler(err)
     { 
-         console.log("System Error : " ,err.message());
+        if(err != null)
+         console.log("System Error : " ,err.message);
          return "Fail";
     }
 };

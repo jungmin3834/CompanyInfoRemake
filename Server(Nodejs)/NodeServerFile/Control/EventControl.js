@@ -1,14 +1,15 @@
 
 const dataControl = require('./DataControl');
 const dbControl = require('./DbControl');
+dbControl.DB.connectDB();
 
 var eventControl ={
     insertManager(req,res){
-        var data = dataControl.queryDataMake(req.body);
-        if(dbControl.DB.companyDataInsert(data) == "Fail")
-            res.send("Fail");
-        else
-            res.send("success");
+        var data = dataControl.queryDataControl.queryDataMake(req.body);
+        //console.log(data);
+        dbControl.DB.companyDataInsert(data);
+       // if( == "Fail")
+            
     },
     selectAllManager(req,res)
     {

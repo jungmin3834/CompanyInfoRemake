@@ -5,9 +5,8 @@ queryDataMake(data)
 {
     if(data == null)
         return null;
-
-    var company = data.company;
-    var passQualification = data.qualification;
+    var company = data.Company_info;
+    var passQualification = data.passQualification;
 
     var queryCompanyData  = {
         name: company.name, 

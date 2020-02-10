@@ -25,12 +25,15 @@ var dbControl = {
     },
     companyDataInsert(data)
       {
+        
           var querycompany_info = connection.query('INSERT INTO company_info SET ?', data.queryCompanyData, function(err, result) {
               return errorControl.errorControl.eventHandler(err , 'Insert Company_info Error');
           });
+          
           var queryqualification = connection.query('INSERT INTO qualification SET ?', data.queryPassQualificationData, function(err, result) {
               return errorControl.errorControl.eventHandler(err , 'Insert qualification Error');
           });
+          //dbControl.disconnectDB();
           return "success";
       },
       companyDataSelectAll(data)
