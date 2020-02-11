@@ -10,7 +10,7 @@ class Container:
 
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
-        self.companyList = None
+        self.companyList =connect_get_all_data();
         #for k in self.companyList:
         #    make_company_data(k)
 

@@ -13,10 +13,8 @@ var eventControl ={
     },
     selectAllManager(req,res)
     {
-        if(dbControl.DB.companyDataSelectAll(data) == "Fail")
-        res.send("Fail");
-        else
-        res.send("success");
+        if(dbControl.DB.companyDataSelectAll(res) == "Fail")
+            console.log("success");
         
     },
     updateManger(req,res)

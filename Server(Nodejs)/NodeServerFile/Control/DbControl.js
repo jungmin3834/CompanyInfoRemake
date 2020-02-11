@@ -6,7 +6,7 @@ connection = mysql.createConnection({
     host     : '127.0.0.1',
     port : '8888',
     user     : 'root',
-    password : 'root',
+    password : 'qudwns12',
     database : 'mydb'
   });
 
@@ -36,12 +36,13 @@ var dbControl = {
           //dbControl.disconnectDB();
           return "success";
       },
-      companyDataSelectAll(data)
+      companyDataSelectAll(res)
       { 
-          var querycompany_info = connection.query('SELECT * FROM company_info , qualification WHERE name = ?', data.queryCompanyData.name , function(err, result) {
+          var querycompany_info = connection.query('SELECT * FROM company_info , qualification WHERE company_info.name=qualification.name ' , function(err, result) {
             errorControl.errorControl.eventHandler(err , 'SELECT companys Error');
-              return null;
+            res.json(result);        
           });
+
           return querycompany_info;
       },
      companyDataUpdate(data)

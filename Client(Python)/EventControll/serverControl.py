@@ -15,8 +15,10 @@ def get_host_path(request_type):
 
 def connect_get_all_data():
     print("data output")
-    r = requests.post(get_host_path('select'))
-    js = r.json()
+    r = requests.post(get_host_path('selectall'))
+    print(r.json())
+#    js = r.json()
+    #print(js)
 
 
 def connect_insert(company):
