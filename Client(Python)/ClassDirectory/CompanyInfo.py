@@ -6,7 +6,7 @@ class CompanyInfo:
         def __init__(self, window):
             self.grade = window.tv_grade  # 학점
             self.toeic = window.tv_toeic  # 토익
-            self.toeicSpeacking = window.tv_toeicSpeacking  # 토익 스피킹
+            self.toeicSpeaking = window.tv_toeicSpeacking  # 토익 스피킹
             self.opic = window.tv_opic  # 오픽
             self.other = window.tv_other  # 기타 언어
             self.certificate = window.tv_certificate  # 자격증
@@ -18,7 +18,7 @@ class CompanyInfo:
         def clearAllEditText(self):
             self.grade.setText("")
             self.toeic.setText("")
-            self.toeicSpeacking.setText("")
+            self.toeicSpeaking.setText("")
             self.opic.setText("")
             self.other.setText("")
             self.certificate.setText("")
@@ -30,7 +30,7 @@ class CompanyInfo:
         def makeUpEditText(self, company):
             self.grade.setText(company.grade)
             self.toeic.setText(company.toeic)
-            self.toeicSpeacking.setText(company.toeicSpeacking)
+            self.toeicSpeaking.setText(company.toeicSpeaking)
             self.opic.setText(company.opic)
             self.other.setText(company.other)
             self.certificate.setText(company.certificate)
@@ -88,7 +88,7 @@ class CompanyInfo:
         self.PassQualification.clearAllEditText()
 
     def makeCompany(self):
-        passqualification = PassQualification(self.PassQualification.grade.text(),self.PassQualification.toeic.text(),self.PassQualification.toeicSpeacking.text(),self.PassQualification.opic.text(),self.PassQualification.other.text()
+        passqualification = PassQualification(self.PassQualification.grade.text(),self.PassQualification.toeic.text(),self.PassQualification.toeicSpeaking.text(),self.PassQualification.opic.text(),self.PassQualification.other.text()
                           ,self.PassQualification.certificate.text(),self.PassQualification.experience.text() ,self.PassQualification.award.text(),self.PassQualification.intern.text(),self.PassQualification.volunteer.text())
         return Company(self.company.text(),self.sales.text(),self.job.text(),self.typed.text(),self.establish.text(),self.location.text(),self.qualification.text()
                        ,self.process.text(),self.companySales.text(),self.people.text(),self.preferential.text(),self.welfare.text(),passqualification)

@@ -25,8 +25,7 @@ class FucntionControl:
         company = self.companyContainer.getCompany()
         index = self.getSelectRowIndex()
         if len(company.company) > 0 and len(company.job) > 0 and len(company.sales) > 0:
-            remove(self.companyContainer.companyList[index])
-            connect_update(company)
+            connect_update(company ,self.companyContainer.companyList[index].company)
             self.companyContainer.refreshContainer()
 
 

@@ -1,5 +1,9 @@
 from ClassDirectory.Company import *
 
+def make_comapny_change(company,name):
+    data = make_company_data(company)
+    data['name'] = {'name' : name}
+    return data
 
 def make_company_data(company):
     data = {
@@ -20,7 +24,7 @@ def make_company_data(company):
         'passQualification': {
             'grade': company.PassQualification.grade,
             'toeic': company.PassQualification.toeic,
-            'toeicSpeaking:': company.PassQualification.toeicSpeacking,
+            'toeicSpeaking:': company.PassQualification.toeicSpeaking,
             'opic': company.PassQualification.opic,
             'other': company.PassQualification.other,
             'certificate': company.PassQualification.certificate,

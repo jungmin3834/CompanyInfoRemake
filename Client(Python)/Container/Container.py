@@ -8,6 +8,7 @@ class Container:
         self.companyInfo = CompanyInfo(window)
         self.refreshContainer()
 
+
     def insertCompanyArrayToList(self , window, companyArray):
         window.tableWidget.setRowCount(0)
         window.tableWidget.setRowCount(len(companyArray))
@@ -18,8 +19,8 @@ class Container:
     def refreshContainer(self):
         self.companyInfo.clearAllEditText()
         self.companyList=connect_get_all_data()
-
         self.insertCompanyArrayToList(self.window,self.companyList)
+
 
     def getCompany(self):
         return self.companyInfo.makeCompany()

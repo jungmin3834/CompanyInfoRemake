@@ -33,7 +33,7 @@ class Info_Window(object):
         self.certificate.setText(company.PassQualification.certificate)
         self.other.setText(company.PassQualification.other)
         self.opic.setText(company.PassQualification.opic)
-        self.toeicSpeacking.setText(company.PassQualification.toeicSpeacking)
+        self.toeicSpeacking.setText(company.PassQualification.toeicSpeaking)
         self.toeic.setText(company.PassQualification.toeic)
 
     def setupUi(self, MainWindow):

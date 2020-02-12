@@ -34,10 +34,11 @@ def connect_insert(company):
     print("insert Connect")
 
 
-def connect_update(company):
+def connect_update(company,name):
     print("update Connect")
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    r = requests.post(get_host_path('update'), data=json.dumps(make_company_data(company)), headers=headers)
+    make_comapny_change(company, name)
+    r = requests.post(get_host_path('update'), data=json.dumps(make_comapny_change(company,name)), headers=headers)
 
 
 def connect_delete(company):
