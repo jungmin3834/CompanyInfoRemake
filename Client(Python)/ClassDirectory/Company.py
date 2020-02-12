@@ -1,10 +1,10 @@
 #회사 이름에 관한 클래스 정의.
 
 class PassQualification:
-    def __init__(self, grade, toeic, toeicSpeacking, opic, other, certificate, experience ,award, intern, volunteer):
+    def __init__(self, grade, toeic, toeicSpeaking, opic, other, certificate, experience ,award, intern, volunteer):
         self.grade = grade  # 학점
         self.toeic = toeic  # 토익
-        self.toeicSpeacking = toeicSpeacking  # 토익 스피킹
+        self.toeicSpeaking = toeicSpeaking  # 토익 스피킹
         self.opic = opic  # 오픽
         self.other = other  # 기타 언어
         self.certificate = certificate  # 자격증
@@ -14,6 +14,7 @@ class PassQualification:
         self.volunteer = volunteer  # 자원 봉사
 
 class Company:
+
     def __init__(self, company, sales, job , typed, establish, location , qualification , process , companySales, people, preferential,welfare,passQualification):
         self.company = company  #회사 이름
         self.sales = sales      #연봉
@@ -28,7 +29,6 @@ class Company:
         self.preferential = preferential    #우대사항
         self.welfare = welfare    #복지종류
         self.PassQualification = passQualification #합격스팩 클래스(따로 빼뒀음)
-
 
 
 #리스트 채우기 할 때 간편하게 쓰기 위해 구현된 함수.

@@ -1,6 +1,6 @@
 import requests
 import json
-
+from EventControll.DataControl import *
 
 def send_message_node(url):
     r = requests.get(url)
@@ -16,15 +16,15 @@ def get_host_path(request_type):
 def connect_get_all_data():
     print("data output")
     r = requests.post(get_host_path('selectall'))
-    print(r.json())
-#    js = r.json()
-    #print(js)
+
+    return json_to_array_company(r.json())
 
 
 def connect_insert(company):
     print(company['Company_info'])
+    data = make_company_data(company)
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    r = requests.post(get_host_path('insert'), data=json.dumps(company), headers=headers)
+    r = requests.post(get_host_path('insert'), data=json.dumps(data), headers=headers)
 
     if r.text == "Fail":
         print("실패!")
@@ -45,36 +45,4 @@ def connect_delete(company):
     r = requests.get(get_host_path('delete'), name=company.company)
 
 
-def make_company_data(company):
-    data = {
-        'Company_info': {
-            'name': company.company,
-            'sales': company.sales,
-            'job': company.job,
-            'typed': company.typed,
-            'establish': company.establish,
-            'location': company.location,
-            'qualification': company.qualification,
-            'process': company.process,
-            'companySales': company.companySales,
-            'people': company.people,
-            'preferential': company.preferential,
-            'welfare': company.welfare
-        },
-        'passQualification': {
-            'grade': company.PassQualification.grade,
-            'toeic': company.PassQualification.toeic,
-            'toeicSpeaking:': company.PassQualification.toeicSpeacking,
-            'opic': company.PassQualification.opic,
-            'other': company.PassQualification.other,
-            'certificate': company.PassQualification.certificate,
-            'experience': company.PassQualification.experience,
-            'award': company.PassQualification.award,
-            'intern': company.PassQualification.intern,
-            'volunteer': company.PassQualification.volunteer
-        }
-    }
 
-    connect_insert(data)
-
-    return data
