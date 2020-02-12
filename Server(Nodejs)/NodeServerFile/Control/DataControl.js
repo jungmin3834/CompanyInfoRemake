@@ -7,7 +7,8 @@ queryDataMake(data)
         return null;
     var company = data.Company_info;
     var passQualification = data.passQualification;
-
+    var prename = data.name;
+    
     var queryCompanyData  = {
         name: company.name, 
         companySales: company.sales, 
@@ -27,7 +28,7 @@ queryDataMake(data)
         name : company.name, 
         grade: passQualification.grade,
         toeic: passQualification.toeic,
-        toeicSpeacking: passQualification.toeicSpeacking,
+        toeicSpeaking: passQualification.toeicSpeaking,
         opic: passQualification.opic,
         other: passQualification.other,
         certificate: passQualification.certificate,
@@ -37,7 +38,7 @@ queryDataMake(data)
         volunteer : passQualification.volunteer
     };
 
-    var datalist = {queryCompanyData, queryPassQualificationData};
+    var datalist = {queryCompanyData, queryPassQualificationData, prename};
     return datalist;
 }
 };

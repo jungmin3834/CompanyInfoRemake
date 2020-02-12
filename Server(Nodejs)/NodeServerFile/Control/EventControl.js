@@ -19,13 +19,14 @@ var eventControl ={
     },
     updateManger(req,res)
     {
-        if(dbControl.DB.companyDataUpdate(data) == "Fail")
-        res.send("Fail");
-        else
-        res.send("success");
+        var data = dataControl.queryDataControl.queryDataMake(req.body);
+        console.log(data.prename)
+        dbControl.DB.companyDataUpdate(data,res);
+
     },
     deleteManager(req,res)
     {
+        var data = dataControl.queryDataControl.queryDataMake(req.body);
         if(dbControl.DB.companyDataDelete(data) == "Fail")
         res.send("Fail");
         else

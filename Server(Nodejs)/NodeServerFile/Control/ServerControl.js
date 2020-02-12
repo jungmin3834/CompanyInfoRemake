@@ -1,7 +1,7 @@
 //express 라이브러리를 가지고 옴 안될 경우 npm install express
 const express = require('express'); 
 const bodyParser = require('body-parser');
-const eventControl = require('./EventControl');
+const EventControl = require('./EventControl');
 
 
 var app = express(); 
@@ -10,21 +10,21 @@ app.use(bodyParser.json())
 
 app.post('/insert',function(req,res){
     
-    eventControl.eventControl.insertManager(req,res);
+    EventControl.eventControl.insertManager(req,res);
     res.send("sucess");
    
 });
 
 app.post('/selectall',function(req,res){
-    eventControl.eventControl.selectAllManager(req,res);
+    EventControl.eventControl.selectAllManager(req,res);
 });
 
 app.post('/update',function(req,res){
-    eventControl.eventControl.updateManager(req,res);
+    EventControl.eventControl.updateManger(req,res);
 });
 
 app.post('/delete',function(req,res){
-    eventControl.eventControl.deleteManager(req,res);
+    EventControl.eventControl.deleteManager(req,res);
 });
 
 app.get('/',function(req,res)

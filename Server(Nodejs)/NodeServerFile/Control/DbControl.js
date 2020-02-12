@@ -6,7 +6,7 @@ connection = mysql.createConnection({
     host     : '127.0.0.1',
     port : '8888',
     user     : 'root',
-    password : 'qudwns12',
+    password : 'root',
     database : 'mydb'
   });
 
@@ -30,7 +30,7 @@ var dbControl = {
               return errorControl.errorControl.eventHandler(err , 'Insert Company_info Error');
           });
           
-          var queryqualification = connection.query('INSERT INTO qualification SET ?', data.queryPassQualificationData, function(err, result) {
+          var queryqualification = connection.query('INSERT INTO passQualification SET ?', data.queryPassQualificationData, function(err, result) {
               return errorControl.errorControl.eventHandler(err , 'Insert qualification Error');
           });
           //dbControl.disconnectDB();
@@ -38,33 +38,37 @@ var dbControl = {
       },
       companyDataSelectAll(res)
       { 
-          var querycompany_info = connection.query('SELECT * FROM company_info , qualification WHERE company_info.name=qualification.name ' , function(err, result) {
+          var querycompany_info = connection.query('SELECT * FROM company_info , passQualification WHERE company_info.name=passQualification.name ' , function(err, result) {
             errorControl.errorControl.eventHandler(err , 'SELECT companys Error');
             res.json(result);        
           });
 
           return querycompany_info;
       },
-     companyDataUpdate(data)
+     companyDataUpdate(data,res)
       {
-          var query = connection.query('UPDATE  company_info SET ?', data.queryCompanyData , ' WHERE name ?', 
-          data.queryCompanyData.name , function(err, result) {
-              return errorControl.errorControl.eventHandler(err , 'UPDATE company_info Error');
+          var sql = "UPDATE company_info SET ? WHERE name= " + "'"+data.prename.name+ "'";
+          console.log(sql);
+          connection.query(sql, [data.queryCompanyData], function(err, result) {
+              errorControl.errorControl.eventHandler(err , 'UPDATE company_info Error');
+              return;
           });
       
-          var query = connection.query('UPDATE  qualification SET ?', data.queryPassQualificationData , ' WHERE name ?', 
-          data.queryCompanyData.name , function(err, result) {
-              return errorControl.errorControl.eventHandler(err , 'UPDATE qualification Error');
+          sql = "UPDATE passQualification SET ? WHERE name=" + "'"+data.prename.name+ "'";
+          connection.query(sql, [data.queryPassQualificationData] , function(err, result) {
+              errorControl.errorControl.eventHandler(err , 'UPDATE passQualification Error');
+              return;
           });
-      
+
+          res.send("Success!");
           return "Success";
       },
       companyDataDelete(data)
       {
-          var query = connection.query('DELETE FROM company_info where name ?' , data.queryCompanyData.name , function(err, result) {
+          var query = connection.query('DELETE FROM company_info WHERE company_info.name=?' , data.queryCompanyData.name , function(err, result) {
               return errorControl.errorControl.eventHandler(err , 'DELETE company_info Error');
           });
-          var query = connection.query('DELETE FROM qualification where name ?' , data.queryCompanyData.name , function(err, result) {
+          var query = connection.query('DELETE FROM passQualification WHERE passQualification.name=?' , data.queryCompanyData.name , function(err, result) {
               return errorControl.errorControl.eventHandler(err , 'DELETE qualification Error');
           });
           return "success";
