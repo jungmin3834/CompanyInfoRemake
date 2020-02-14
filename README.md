@@ -1,5 +1,7 @@
 # CompanyInfoRemake
-기존 파이썬 프로젝트 서버 부분 수정 firebase -> nodejs + db(미정)  
 
-진행률 : 70% 정도 진행되었음.  
-파이어베이스 데이터 mysql로 이동 및 테스트 정도 남았음
+Python + Qt를 이용하여 만든 윈도우 프로그램으로 여러 회사들의 정보를 볼 수 있다. 
+
+
+개발 환경  
+Python , Nodejs , Mysql.  
